@@ -14,10 +14,14 @@ Cloud Platforms:
 Virtualization:
 
 ![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white)
+![Proxmox](https://img.shields.io/badge/Proxmox-%234C8BF5.svg?style=for-the-badge&logo=proxmox&logoColor=white)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-%230074FF.svg?style=for-the-badge&logo=virtualbox&logoColor=white)
 
 Operating Systems:
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Microsoft Windows](https://img.shields.io/badge/Microsoft%20Windows-0078D4?style=for-the-badge&logo=microsoft-windows&logoColor=white)
+![Microsoft Servers](https://img.shields.io/badge/Microsoft%20Servers-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
 
 Networking:
 
