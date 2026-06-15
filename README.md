@@ -1,40 +1,48 @@
-<!-- Replace [Your Name] below with your real name, and the Upwork link at the bottom with your profile URL. -->
-
 # Hi, I'm Kamran Akhlaq 👋
 
-### IT Operations & Support Engineer · Linux · Networking · VoIP · DevOps
+### Infrastructure & Operations Engineer · Linux · Networking · Cloud · VoIP · DevOps
 
 When a server goes down, a network starts dropping packets, or a phone system stops taking calls, I find what actually broke and fix it for good.
 
 ## 👨‍💻 About Me
 
-I'm an IT operations and support engineer with 9+ years keeping systems running across IT, telecom, and product-driven companies. Most of my work is troubleshooting and fixing what breaks, then making sure it doesn't break again: Linux servers, networks, VoIP platforms, databases, and the monitoring around them.
+I'm an infrastructure and operations engineer with 11+ years across IT, telecom, and product-driven companies. I do two things well: keep mission-critical systems running, and find what broke at the root so it stays fixed.
 
-I work across DevOps and cloud (AWS, Azure, GCP), virtualization (VMware, Proxmox), Linux and Windows Server administration, networking and network security, databases and ETL, VoIP/Asterisk, and Python automation.
+I currently lead a 14-person team operating roughly 100 servers and 350 VMs behind telecom platforms that serve 20M+ subscribers at 99.9% uptime. My work runs from packet-level network troubleshooting and Linux administration up to building Production and Disaster-Recovery data centers, Kubernetes clusters, PostgreSQL high availability, and the monitoring and automation around all of it.
 
 ## 🛠️ What I Do
 
-- **Technical support & troubleshooting:** servers, networks, applications, and phone systems, from urgent one-off fixes to ongoing day-to-day support.
-- **Production support & incident management:** incidents, problems, change requests, root-cause analysis, SLA monitoring, and 24/7 operations (Zammad, Zendesk, Jira, UVdesk).
-- **Linux & system administration:** Ubuntu, Debian, and CentOS: services, logs, users and permissions, backups, patching, and performance tuning.
-- **Networking & security:** Cisco, Fortinet, MikroTik, and UniFi: VLANs, routing and switching, NAT, IPsec/SSL VPN, DNS/DHCP, and firewall policies.
-- **DevOps, cloud & databases:** Docker, CI/CD (Jenkins, Git), and Kubernetes; AWS and Azure; MySQL, PostgreSQL, and Percona; Nginx, HAProxy, and Apache; plus Python automation.
-- **Monitoring:** Prometheus, Grafana, Nagios, Cacti, PRTG, Wazuh, and Alertmanager for dashboards, alerting, and early issue detection.
-- **VoIP & telephony:** Asterisk, FreePBX, and Vicidial: SIP trunks, IVR, call routing, CDRs, and call-quality troubleshooting.
+- **Infrastructure & data centers:** design and build Production and DR environments, hardware-to-production, on open-source stacks: Kubernetes, PostgreSQL HA, distributed storage, load balancing, and DR drills.
+- **Network troubleshooting & security:** packet-level diagnosis (Wireshark, tcpdump) of TCP/IP, TLS, DNS, routing, and firewall faults across Cisco, Fortinet, MikroTik, and UniFi; VLANs, NAT, IPsec/SSL VPN.
+- **Linux & systems administration:** Ubuntu, Debian, RHEL/CentOS, services, logs, permissions, backups, patching, hardening, and performance tuning.
+- **Cloud & DevOps:** AWS and Azure (compute, networking, storage, identity), Docker and Kubernetes, CI/CD with Jenkins and Git, and Python/Bash/Ansible automation.
+- **Databases:** PostgreSQL (HA, replication, DR, tuning), MySQL/MariaDB and Percona, plus Nginx, HAProxy, and Apache in front.
+- **Production support & incident management:** incidents, problems, change, root-cause analysis, SLA tracking, and 24/7 operations (Zammad, Zendesk, Jira).
+- **Monitoring & observability:** Nagios, Prometheus, Grafana, PRTG, Wazuh, and Alertmanager for coverage, alerting, and early detection.
+- **VoIP & telephony:** Asterisk, FreePBX, and Vicidial, SIP trunks, IVR, call routing, CDRs, and call-quality troubleshooting.
 
 ## 🔧 Selected Work
 
-**Cut issue resolution time from 8 hours to about 2**
-A production environment was losing hours on every incident because problems were caught late and escalations were messy. I reworked the monitoring, set up clearer escalation handling, and tightened the incident response process. Average resolution time dropped from around 8 hours to about 2.
+**[Built Production + Disaster-Recovery data centers from bare metal (65 servers)](./project-datacenter-abis.md)**
+Led the end-to-end build of Production and DR sites on an open-source stack: multi-master Kubernetes, PostgreSQL high availability (replication and connection pooling), Rook-Ceph distributed and object storage, Keycloak identity, and HAProxy with VIP failover. Designed the segmented network, hardened the OS, ran DR drills, and documented it to ISO/IEC 22237 and 27001 readiness.
 
-**Eliminated recurring production tickets (roughly 90% fewer)**
-The same issues kept coming back week after week. I ran root-cause analysis on the worst offenders, put in permanent fixes instead of band-aids, added preventive monitoring, and documented everything so it stayed fixed.
+**Restored analytics traffic blocked at the network level (40% → 100% delivery)**
+Analytics events were silently failing to reach a cloud endpoint. I captured and analyzed the traffic, isolated the cause to injected TCP RST packets and dropped TLS handshakes on the international path, and routed around the interference to bring delivery back to 100%.
 
-**Stabilized a VoIP/Asterisk platform (around 90% fewer call-quality complaints)**
-A call platform was generating constant complaints about dropped calls and bad audio. I traced it to SIP trunk, call-routing, and codec/NAT issues, fixed them, and tuned service performance.
+**Stabilized a 50-node Kubernetes cluster (300+ days uptime since)**
+Brought an unstable multi-master cluster to a healthy state by working through Flannel CNI crash loops, PodCIDR mismatches, containerd and CoreDNS faults, and registry pulls blocked behind a corporate proxy. It has run 300+ days without recurrence.
 
-**Built out a support operation from scratch**
-Support was reactive and nothing was measurable. I set up ticket priorities, SLA tracking, escalation flows, RCA reporting, and SOPs, which made response times measurable and stopped issues slipping through.
+**[Modernized enterprise monitoring (coverage 23% → 95%+, detection ~10% → ~90%)](./project-monitoring-modernization.md)**
+Rebuilt an underperforming monitoring platform with deep Linux and ESXi coverage and custom checks, raising service-check coverage from ~23% to over 95% and proactive fault detection from ~8-15% to 85-90%, while cutting monitoring-server load by ~87%.
+
+**Eliminated recurring production incidents (10-15/month → 0)**
+The same issues kept coming back. I ran root-cause analysis on the worst offenders, put in permanent fixes instead of band-aids, added preventive monitoring, and documented everything so it stayed fixed.
+
+**Stabilized a VoIP/Asterisk platform handling ~150K calls/day (~90% fewer complaints)**
+A call platform was generating constant dropped-call and audio complaints. I traced it to SIP trunk, call-routing, and codec/NAT issues, fixed them, and tuned service performance.
+
+**Automated routine operations (50 tasks, ~16 hours/week saved)**
+Replaced manual, repetitive work with Python, Bash, and Ansible, server build and hardening, monitoring, backups, and ETL, removing 50 recurring tasks and freeing roughly 16 hours a week.
 
 ## 💻 Tech Stack
 
@@ -70,7 +78,7 @@ Support was reactive and nothing was measurable. I set up ticket priorities, SLA
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 
 **Monitoring**
 
@@ -109,14 +117,11 @@ Support was reactive and nothing was measurable. I set up ticket priorities, SLA
 - HCNA Routing & Switching
 - Palo Alto ACE (Accredited Configuration Engineer)
 - Fortinet NSE 1 & 2
-
-<!-- Optional: turn on a GitHub stats card by uncommenting the line below and adding your username.
-## 📊 GitHub Stats
-![Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)
--->
+- Microsoft Certified: Azure AI Fundamentals (AI-900)
 
 ## 📫 Work With Me
 
-I'm available for freelance IT operations, support, and infrastructure work. The best place to reach me is through Upwork, so if you found me there, let's keep the conversation on Upwork.
+I'm available for freelance and contract work in infrastructure, operations, networking, and support, from urgent fixes to long-term engagements.
 
-[![Upwork](https://img.shields.io/badge/Hire%20me%20on-Upwork-6FDA44?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/YOUR_PROFILE_LINK)
+<!-- Replace YOUR_PROFILE_LINK with your real Upwork profile URL before publishing. -->
+[![Upwork](https://img.shields.io/badge/Hire%20me%20on-Upwork-6FDA44?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/~010ed25fc87ec3fe85?mp_source=share)
