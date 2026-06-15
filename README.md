@@ -32,7 +32,7 @@ Analytics events were silently failing to reach a cloud endpoint. I captured and
 **Stabilized a 50-node Kubernetes cluster (300+ days uptime since)**
 Brought an unstable multi-master cluster to a healthy state by working through Flannel CNI crash loops, PodCIDR mismatches, containerd and CoreDNS faults, and registry pulls blocked behind a corporate proxy. It has run 300+ days without recurrence.
 
-**[Modernized enterprise monitoring (coverage 23% → 95%+, detection ~10% → ~90%)](./project-monitoring-modernization.md)**
+**[Modernized enterprise monitoring (coverage 23% → 95%+, detection ~10% → ~90%)](https://github.com/kamran-akhlaq/Project-Monitoring-Modernization/blob/main/README.md)**
 Rebuilt an underperforming monitoring platform with deep Linux and ESXi coverage and custom checks, raising service-check coverage from ~23% to over 95% and proactive fault detection from ~8-15% to 85-90%, while cutting monitoring-server load by ~87%.
 
 **Eliminated recurring production incidents (10-15/month → 0)**
