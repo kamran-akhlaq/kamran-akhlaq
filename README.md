@@ -23,7 +23,7 @@ I currently lead a 14-person team operating roughly 100 servers and 350 VMs behi
 
 ## 🔧 Selected Work
 
-**[Built Production + Disaster-Recovery data centers from bare metal (65 servers)](./project-datacenter-abis.md)**
+**[Built Production + Disaster-Recovery data centers from bare metal (65 servers)](https://github.com/kamran-akhlaq/Project-Datacenter-ABIS/blob/main/README.md)**
 Led the end-to-end build of Production and DR sites on an open-source stack: multi-master Kubernetes, PostgreSQL high availability (replication and connection pooling), Rook-Ceph distributed and object storage, Keycloak identity, and HAProxy with VIP failover. Designed the segmented network, hardened the OS, ran DR drills, and documented it to ISO/IEC 22237 and 27001 readiness.
 
 **Restored analytics traffic blocked at the network level (40% → 100% delivery)**
